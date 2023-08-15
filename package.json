@@ -1,0 +1,32 @@
+{
+  "name": "task-master",
+  "version": "1.0.0",
+  "description": "A simple todo list application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarmuyomba/task-master.git"
+  },
+  "keywords": [
+    "todo-list",
+    "task"
+  ],
+  "author": "Edgar Matthew <edgarmatthew247@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgarmuyomba/task-master/issues"
+  },
+  "homepage": "https://github.com/edgarmuyomba/task-master#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

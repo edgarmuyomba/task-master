@@ -1,0 +1,107 @@
+.main {
+    width: 85%;
+    height: 100%;
+    font-family: var(--roboto);
+}
+
+.main > .header {
+    height: 20%;
+    background-image: url('../img/header.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.main > .header > .title {
+    font-size: 32px;
+    color: slategray;
+}
+
+.main > .aside {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 16px;
+}
+
+.main > .aside > .newTask {
+    grid-column: 1 / 2;
+    background-color: var(--orange);
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 110px;
+}
+
+.main > .aside > .newTask:hover {
+    background-color: chocolate;
+}
+
+.main > .aside > .fake {
+    display: flex;
+    gap: 8px;
+    grid-column: 2 / 3;
+    justify-self: end;
+}
+
+.main > .aside > .fake > * {
+    border: 1.5px solid lightgray;
+    padding: 8px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.main > .content {
+    padding: 0 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.main > .content > .workspace {
+    width: 25%;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: ghostwhite;
+}
+
+.main > .content > .workspace > .heading {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.main > .content > .workspace > .tasks {
+    margin-top: 20px;
+}
+
+.main > .content > .workspace .task {
+    height: 160px;
+    background-color: lightgrey;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--lato);
+}
+
+.main > .content > .workspace .task > .due {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.main > .content > .workspace .task > .title {
+    font-size: 35px;
+}
+
+.main > .content > .workspace .task > .time {
+    font-size: 13px;
+}

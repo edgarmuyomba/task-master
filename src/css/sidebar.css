@@ -1,0 +1,98 @@
+.sidebar {
+    width: 15%;
+    height: 100%;
+    background-color: whitesmoke;
+    padding: 16px;
+    font-family: var(--roboto);
+}
+
+.sidebar > .logo {
+    font-weight: 700;;
+    font-size: 20px;
+}
+
+.sidebar > .logo > span {
+    color: chocolate;
+}
+
+.sidebar > .profile {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 16px;
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.sidebar > .profile > .profileImage {
+    background-image: url('../img/profile.jpg');
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    margin-right: 8px;
+}
+
+.sidebar > .profile > .name {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    align-self: end;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar > .profile > .name > span > img{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.sidebar > .profile > .email {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    font-size: 13px;
+}
+
+.sidebar > .inbox {
+    font-size: 20px;
+    margin-top: 32px;
+}
+
+.sidebar > .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.sidebar .side-tile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+}
+
+.sidebar .tile {
+    border-radius: 10px;
+}
+
+.sidebar .tile:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+.sidebar > .workspaces {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar > .workspaces > .title {
+    font-size: 20px;
+}
