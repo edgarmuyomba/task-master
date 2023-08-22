@@ -55,7 +55,7 @@
 .sidebar > .profile > .email {
     grid-column: 2 / -1;
     grid-row: 2 / -1;
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .sidebar > .inbox {

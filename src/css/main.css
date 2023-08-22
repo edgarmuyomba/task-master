@@ -36,6 +36,7 @@
     align-items: center;
     gap: 4px;
     width: 110px;
+    cursor: default;
 }
 
 .main > .aside > .newTask:hover {

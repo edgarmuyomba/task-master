@@ -46,6 +46,12 @@
     width: 15px;
 }
 
+.newTaskTab > .close {
+    content: url('../icon/close-box.svg');
+    height: 20px;
+    transition: 0.3s;
+}
+
 /* hover icons */
 
 .sidebar > .menu .title:hover::before {
@@ -76,4 +82,8 @@
     content: url('../icon/pin-white.svg');
     height: 25px;
     width: 25px;
+}
+
+.newTaskTab > .close:hover {
+    scale: 120%;
 }
