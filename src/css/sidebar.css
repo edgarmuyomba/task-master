@@ -78,6 +78,10 @@
     cursor: default;
 }
 
+.sidebar .tile.selected {
+    background-color: lightgray;
+}
+
 .sidebar .tile {
     border-radius: 10px;
 }

@@ -4,11 +4,22 @@ import { displayNewTask } from "./newTask";
 const content = document.querySelector('.main > .content');
 
 function displayOverview() {
-    content.innerHTML = '';
+    setContent();
+    setHeader();
     createWorkSpaces();
     handleNewTasks();
     clickTasks();
 };
+
+function setHeader() {
+    let header = document.querySelector('.main > .header > .title');
+    header.textContent = 'Overview';
+}
+
+function setContent() {
+    content.innerHTML = '';
+    content.classList = 'content';
+}
 
 function createWorkSpaces() {
     for (let space of workspaces) {
@@ -38,12 +49,12 @@ function addTasks(workspace, space) {
         if (currTasks.length < 3) {
             if (task.workspace === space) {
                 tasksDiv.innerHTML += `
-                                    <div class="task">
+                                    <div class="task ${task.status.code}">
                                         <div class="due">Today</div>
                                         <div class="title">${task.title}</div>
                                         <div class="time">9:00 AM - 9:30 AM</div>
                                     </div>
-                                `;
+                                    `;
             }
         }
     }

@@ -23,16 +23,33 @@ let workspaces = [
     "Design"
 ];
 
-let indices = [0, 1, 2, 3, 4, 5, 6, 7];
+let status = [
+    {
+        code: 'not-started',
+        title: 'Not Started'
+    },
+    {
+        code: 'in-progress',
+        title: 'In Progress'
+    },
+    {
+        code: 'complete',
+        title: 'Complete'
+    }
+];
+
+let indices = [0, 1, 2, 3, 4, 5, 6];
 
 const tasks = [];
 
 for (let index of indices) {
     let space = Math.floor(Math.random() * 2);
+    let state = Math.floor(Math.random() * 3);
     tasks.push({
         title: titles[index],
         body: bodies[index],
-        workspace: workspaces[space]
+        workspace: workspaces[space],
+        status: status[state]
     });
 }
 

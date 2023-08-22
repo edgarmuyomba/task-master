@@ -100,6 +100,18 @@
     scale: 105%;
 }
 
+.main > .content > .workspace .task.not-started {
+    border-right: 4px solid red;
+}
+
+.main > .content > .workspace .task.in-progress {
+    border-right: 4px solid orange;
+}
+
+.main > .content > .workspace .task.complete {
+    border-right: 4px solid lime;
+}
+
 .main > .content > .workspace .task > .due {
     font-size: 13px;
     font-weight: 700;

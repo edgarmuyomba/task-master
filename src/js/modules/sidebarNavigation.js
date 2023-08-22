@@ -6,12 +6,14 @@ import { displayPersonal } from "./displayPersonal";
 import { displayDesign } from "./displayDesign";
 
 
-const sideTiles = document.querySelectorAll('.sidebar .side-tile');
+const sideTiles = document.querySelectorAll('.sidebar .tile');
 
 sideTiles.forEach((tile) => {
-    tile.addEventListener('click', () => {
-        let title = tile.textContent;
-        contentDisplay(title);
+    let text = tile.querySelector('.side-tile');
+    text.addEventListener('click', () => {
+        clearSelect();
+        contentDisplay(text);
+        addSelect(tile);
     });
 })
 
@@ -24,7 +26,16 @@ let tiles = {
     'Design': displayDesign,
 }
 
-function contentDisplay(title) {
+function contentDisplay(text) {
+    let title = text.textContent;
     let display = tiles[title];
     display();
+}
+
+function clearSelect() {
+    sideTiles.forEach((tile) => tile.classList.remove('selected'));
+}
+
+function addSelect(tile) {
+    tile.classList.add('selected');
 }
