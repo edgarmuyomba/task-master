@@ -5,3 +5,4 @@ import '../css/main.css';
 import '../css/newTask.css';
 
 import './modules/newTask.js';
+import './modules/sidebarNavigation.js';
