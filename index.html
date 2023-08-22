@@ -8,19 +8,20 @@
     <script src="./main.js" defer></script>
 </head>
 
+<!-- Photo by <a href="https://unsplash.com/@mariolagr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">MARIOLA GROBELSKA</a> on <a href="https://unsplash.com/photos/8a7ZTFKax_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+<!-- Photo by <a href="https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kolosyuk</a> on <a href="https://unsplash.com/photos/D5nh6mCW52c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 <body>
     <div class="sidebar">
         <div class="logo">Task<span>Master</span></div>
         <div class="profile">
             <div class="profileImage"></div>
-            <!-- Photo by <a href="https://unsplash.com/@mariolagr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">MARIOLA GROBELSKA</a> on <a href="https://unsplash.com/photos/8a7ZTFKax_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
             <div class="name">John Doe</div>
             <div class="email">jonathan@doe.com</div>
         </div>
-        <div class="inbox">Overview</div>
+        <div class="inbox">Menu</div>
         <div class="menu">
             <div class="tile">
-                <div class="side-tile title">Menu</div>
+                <div class="side-tile title">Overview</div>
             </div>
             <div class="tile">
                 <div class="side-tile today">Today</div>
@@ -46,7 +47,6 @@
     <div class="main">
         <div class="header">
             <div class="title">Overview</div>
-            <!-- Photo by <a href="https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kolosyuk</a> on <a href="https://unsplash.com/photos/D5nh6mCW52c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
         </div>
         <div class="aside">
             <div class="newTask">New Task</div>
@@ -125,6 +125,26 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="newTaskContainer" style="display: none;">
+        <div class="newTaskTab">
+            <div class="close"></div>
+            <form action="" method="POST">
+                <label for="Workspaces">Workspace</label>
+                <select name="Workspaces" id="Workspaces">
+                    <option value="Today" selected>Today</option>
+                    <option value="Tomorrow">Tomorrow</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Design">Design</option>
+                </select>
+                <input class="title" type="text" name="Title" id="Title" placeholder="Title">
+                <div class="due">
+                    <div class="date">19th Aug</div>
+                    <div class="time">9:00 AM</div>
+                </div>
+                <input class="submit" type="submit" value="Create">
+            </form>
         </div>
     </div>
 </body>
