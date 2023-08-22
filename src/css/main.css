@@ -92,6 +92,12 @@
     flex-direction: column;
     justify-content: space-between;
     font-family: var(--lato);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main > .content > .workspace .task:hover {
+    scale: 105%;
 }
 
 .main > .content > .workspace .task > .due {

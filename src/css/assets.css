@@ -40,10 +40,11 @@
     width: 20px;
 }
 
-.main > .content > .workspace > .heading::after {
+.main > .content > .workspace > .heading > .plus-box {
     content: url('../icon/plus-box.svg');
     height: 15px;
     width: 15px;
+    transition: 0.3s;
 }
 
 .newTaskTab > .close {
@@ -85,5 +86,9 @@
 }
 
 .newTaskTab > .close:hover {
+    scale: 120%;
+}
+
+.main > .content > .workspace > .heading > .plus-box:hover {
     scale: 120%;
 }

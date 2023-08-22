@@ -1,10 +1,13 @@
 const newTask = document.querySelector('.main > .aside > .newTask');
 const newTaskCont = document.querySelector('.newTaskContainer');
 
-newTask.addEventListener('click', displayNewTask);
+newTask.addEventListener('click', () => newTaskCont.style.display = '');
 
-function displayNewTask() {
-    newTaskCont.style.display = '';
+function displayNewTask(choice) {
+    newTaskCont.style.display = ''
+    // picking the selected
+    const dropDown = newTaskCont.querySelector('select');
+    dropDown.value = choice;
 }
 
 const close = newTaskCont.querySelector('.close');
@@ -24,3 +27,4 @@ function handleForm(event) {
 function hideNewTask() {
     newTaskCont.style.display = 'none';
 }
+export { displayNewTask };

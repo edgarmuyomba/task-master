@@ -1,11 +1,13 @@
 import { tasks, workspaces } from "./taskStorage";
+import { displayNewTask } from "./newTask";
 
 const content = document.querySelector('.main > .content');
 
 function displayOverview() {
     content.innerHTML = '';
     createWorkSpaces();
-    // do nothing
+    handleNewTasks();
+    clickTasks();
 };
 
 function createWorkSpaces() {
@@ -19,34 +21,53 @@ function createWorkSpaces() {
 }
 
 function createDivs(workspace, space) {
-    let header = document.createElement('div');
-    header.classList.add('heading');
-
-    let title = document.createElement('div');
-    title.classList.add('title');
-    title.textContent = space;
-
-    header.appendChild(title);
-    workspace.appendChild(header);
-
-    let tasks = document.createElement('div');
-    tasks.classList.add('tasks');
-    workspace.appendChild(tasks);
+    workspace.innerHTML += `
+                                <div class="heading">
+                                    <div class="title">${space}</div>
+                                    <div class="plus-box"></div>
+                                </div>
+                                <div class="tasks">
+                                </div>
+                            `;
 }
 
 function addTasks(workspace, space) {
     let tasksDiv = workspace.querySelector('.tasks');
     for (let task of tasks) {
-        if (task.workspace === space) {
-            tasksDiv.innerHTML += `
+        let currTasks = tasksDiv.querySelectorAll('.task');
+        if (currTasks.length < 3) {
+            if (task.workspace === space) {
+                tasksDiv.innerHTML += `
                                     <div class="task">
                                         <div class="due">Today</div>
                                         <div class="title">${task.title}</div>
                                         <div class="time">9:00 AM - 9:30 AM</div>
                                     </div>
                                 `;
+            }
         }
     }
+}
+
+function handleNewTasks() {
+    let headings = content.querySelectorAll('.workspace > .heading');
+    headings.forEach((heading) => {
+        let title = heading.querySelector('.title').textContent;
+        let newTask = heading.querySelector('.plus-box');
+        newTask.addEventListener('click', () => {
+            displayNewTask(title);
+        });
+    })
+}
+
+function clickTasks() {
+    let currTasks = content.querySelectorAll('.content .tasks > .task');
+    currTasks.forEach((task) => {
+        task.addEventListener('click', () => {
+            let title = task.querySelector('.title').textContent;
+            console.log(title);
+        }); 
+    });
 }
 
 displayOverview();
