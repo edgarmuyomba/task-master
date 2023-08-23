@@ -1,4 +1,4 @@
-import { workspaces } from "./taskStorage";
+import { workspaces, saveWorkSpace } from "./taskStorage";
 
 const newSpaceButton = document.querySelector('.workspaces > .heading > .newSpace');
 const noSpaceButton = document.querySelector('.workspaces > .heading > .noSpace');
@@ -32,13 +32,7 @@ function handleNewSpace(event) {
     let inp = newForm.querySelector('input');
 
     let workspace = inp.value;
+    saveWorkSpace(workspace);
     inp.value = '';
 
-    workspaces = localStorage.getItem('workspaces');
-    if (workspaces) {
-        workspaces.push(workspace);
-        localStorage.setItem('workspaces', JSON.stringify(workspaces));
-    } else {
-        localStorage.setItem('workspaces', JSON.stringify([workspace]));
-    }
 }

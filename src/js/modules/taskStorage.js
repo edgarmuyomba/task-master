@@ -18,10 +18,7 @@ let bodies = [
     "This is body 7",
 ];
 
-let workspaces = [
-    "Personal",
-    "Design"
-];
+let workspaces = [];
 
 let status = [
     {
@@ -53,4 +50,28 @@ for (let index of indices) {
     });
 }
 
-export { tasks, workspaces };
+window.onload = () => {
+    workspaces = fetchWorkSpaces();
+}
+
+function fetchWorkSpaces() {
+    let savedSpaces = localStorage.getItem('workspaces');
+    if (savedSpaces) {
+        return savedSpaces;
+    }
+    else {
+     localStorage.setItem('workspaces', JSON.stringify([]));
+     return [];
+    }
+        
+}
+
+function saveWorkSpace(name) {
+    let savedSpaces = JSON.parse(localStorage.getItem('workspaces'));
+    savedSpaces.push(name);
+    localStorage.setItem('workspaces', JSON.stringify(savedSpaces));
+    workspaces.concat(savedSpaces);
+}
+
+console.log(workspaces);
+export { tasks, workspaces, saveWorkSpace };
