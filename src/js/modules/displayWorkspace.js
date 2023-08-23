@@ -26,6 +26,7 @@ function displayTasks(title) {
             content.innerHTML += `
                                     <div class="workspace-task">
                                         <div class="title">${task.title}</div>
+                                        <div class="due">${task.date} - ${task.time}</div>
                                         <div class="status ${task.status.code}">${task.status.title}</div>
                                     </div>
                                 `;

@@ -52,9 +52,9 @@ function addTasks(workspace, space) {
             if (task.workspace === space) {
                 tasksDiv.innerHTML += `
                                     <div class="task ${task.status.code}">
-                                        <div class="due">Today</div>
+                                        <div class="due">${task.date}</div>
                                         <div class="title">${task.title}</div>
-                                        <div class="time">9:00 AM - 9:30 AM</div>
+                                        <div class="time">${task.time}</div>
                                     </div>
                                     `;
             }
