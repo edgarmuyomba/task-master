@@ -10,6 +10,7 @@
 
 <!-- Photo by <a href="https://unsplash.com/@mariolagr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">MARIOLA GROBELSKA</a> on <a href="https://unsplash.com/photos/8a7ZTFKax_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 <!-- Photo by <a href="https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kolosyuk</a> on <a href="https://unsplash.com/photos/D5nh6mCW52c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+
 <body>
     <div class="sidebar">
         <div class="logo">Task<span>Master</span></div>
@@ -47,8 +48,8 @@
                 </form>
             </div>
             <!-- <div class="tile">
-                <div class="side-tile workspace">Personal</div>
-            </div> -->
+                    <div class="side-tile workspace">Personal</div>
+                </div> -->
         </div>
     </div>
     <div class="main">
@@ -65,18 +66,18 @@
         </div>
         <div class="content">
             <!-- <div class="workspace">
-                <div class="heading">
-                    <div class="title">Personal</div>
-                    <div class="plus-box"></div>
-                </div>
-                <div class="tasks">
-                    <div class="task">
-                        <div class="due">Today</div>
-                        <div class="title">Take a walk</div>
-                        <div class="time">9:00 AM - 9:30 AM</div>
+                    <div class="heading">
+                        <div class="title">Personal</div>
+                        <div class="plus-box"></div>
                     </div>
-                </div>
-            </div> -->
+                    <div class="tasks">
+                        <div class="task">
+                            <div class="due">Today</div>
+                            <div class="title">Take a walk</div>
+                            <div class="time">9:00 AM - 9:30 AM</div>
+                        </div>
+                    </div>
+                </div> -->
         </div>
     </div>
     <div class="newTaskContainer" style="display: none;">
@@ -93,6 +94,27 @@
                     <input type="time" name="" id="" class="time">
                 </div>
                 <input class="submit" type="submit" value="Create">
+            </form>
+        </div>
+    </div>
+    <div class="taskDetailContainer" style="display: none;">
+        <div class="taskDetailTab">
+            <div class="close"></div>
+            <form action="" class="taskDetail" method="POST">
+                <input type="text" class="title">
+                <input type="text" class="body">
+                <select name="Workspaces" id="workspaces" class="workspaces">
+                </select>
+                <div class="due">
+                    <input type="date" name="date" id="" class="date">
+                    <input type="time" name="" id="" class="time">
+                </div>
+                <select name="status" id="status" class="status">
+                    <option value="not-started">Not Started</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <input type="submit" value="Save" class="submit">
             </form>
         </div>
     </div>
