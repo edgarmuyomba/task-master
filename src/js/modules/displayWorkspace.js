@@ -2,15 +2,15 @@ import { tasks } from "./taskStorage";
 
 const content = document.querySelector('.main > .content');
 
-function displayPersonal() {
-    setHeader();
+function displayWorkSpace(title) {
+    setHeader(title);
     setContent();
-    displayTasks();
-};
+    displayTasks(title);
+}
 
-function setHeader() {
+function setHeader(title) {
     let header = document.querySelector('.main > .header > .title');
-    header.textContent = 'Personal';
+    header.textContent = title;
 }
 
 function setContent() {
@@ -19,17 +19,17 @@ function setContent() {
     content.classList.add('Workspace');
 }
 
-// stopped here
-function displayTasks() {
+function displayTasks(title) {
     for (let task of tasks) {
-        content.innerHTML += `
+        if (task.workspace === title) {
+            content.innerHTML += `
                                 <div class="workspace-task">
                                     <div class="title">${task.title}</div>
-                                    <div class="workspace">${task.workspace}</div>
                                     <div class="status ${task.status.code}">${task.status.title}</div>
                                 </div>
                             `;
+        }
     }
 }
 
-export { displayPersonal };
+export { displayWorkSpace };

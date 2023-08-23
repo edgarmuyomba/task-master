@@ -1,10 +1,10 @@
-.main > .content.Tomorrow {
+.main > .content.Workspace {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.main > .content.Tomorrow > * {
+.main > .content.Workspace > * {
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 4px 16px;
@@ -16,18 +16,18 @@
     transition: 0.3s;
 }
 
-.main > .content.Tomorrow > *:hover {
+.main > .content.Workspace > *:hover {
     scale: 101%;
 }
 
-.main > .content.Tomorrow > .tomorrow-task > .title {
+.main > .content.Workspace > .workspace-task > .title {
     font-weight: 500;
     font-size: 20px;
     border-right: 1px solid lightgrey;
     padding-right: 32px;
 }
 
-.main > .content.Tomorrow > .tomorrow-task > .status {
+.main > .content.Workspace > .workspace-task > .status {
     margin-left: auto;
     width: 7%;
     padding: 2px 8px;
@@ -38,14 +38,14 @@
     align-items: center;
 }
 
-.main > .content.Tomorrow > .tomorrow-task > .not-started {
+.main > .content.Workspace > .workspace-task > .not-started {
     background-color: tomato;
 }
 
-.main > .content.Tomorrow > .tomorrow-task > .in-progress {
+.main > .content.Workspace > .workspace-task > .in-progress {
     background-color: orange;
 }
 
-.main > .content.Tomorrow > .tomorrow-task > .complete {
+.main > .content.Workspace > .workspace-task > .complete {
     background-color: lightgreen;
 }

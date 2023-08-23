@@ -6,6 +6,7 @@ import '../css/newTask.css';
 import '../css/today.css';
 import '../css/tomorrow.css';
 import '../css/thisWeek.css';
+import '../css/workspace.css';
 
 import './modules/newTask.js';
 import './modules/sidebarNavigation.js';
