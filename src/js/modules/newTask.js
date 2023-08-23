@@ -43,6 +43,7 @@ function handleForm(event) {
         title: title,
         date: date,
         time: time,
+        body: '',
     });
 
     hideNewTask();
