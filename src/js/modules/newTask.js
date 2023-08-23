@@ -9,31 +9,32 @@ newTask.addEventListener('click', () => newTaskCont.style.display = '');
 function displayNewTask(choice) {
     newTaskCont.style.display = ''
     // picking the selected
-    const dropDown = newTaskCont.querySelector('select');
+    const dropDown = newTaskCont.querySelector('.newTaskTab select');
     dropDown.value = choice;
 }
 
-const close = newTaskCont.querySelector('.close');
+const close = newTaskCont.querySelector('.newTaskTab .close');
 close.addEventListener('click', hideNewTask);
 
-const TaskForm = newTaskCont.querySelector('form');
+const TaskForm = newTaskCont.querySelector('.newTaskTab form');
 TaskForm.addEventListener('submit', handleForm);
 
 const minimumDate = format(Date.now(), 'yyyy-MM-dd');
 
-let date = TaskForm.querySelector('.due > .date');
+let date = TaskForm.querySelector('.newTaskTab .due > .date');
 date.setAttribute('min', minimumDate);
 date.setAttribute('value', minimumDate);
 
 function handleForm(event) {
     event.preventDefault();
     
-    let workspace = TaskForm.querySelector('select').value;
-    let title = TaskForm.querySelector('input.title').value;
-    let date = TaskForm.querySelector('.due > .date').value;
-    let time = TaskForm.querySelector('.due > .time').value;
+    let workspace = TaskForm.querySelector('.newTaskTab select').value;
+    let title = TaskForm.querySelector('.newTaskTab input.title').value;
+    let date = TaskForm.querySelector('.newTaskTab .due > .date').value;
+    let time = TaskForm.querySelector('.newTaskTab .due > .time').value;
 
     saveTask({
+        id: Math.floor(Math.random() * 100000),
         status: {
             code: "not-started",
             title: "Not Started"
@@ -53,15 +54,15 @@ function hideNewTask() {
 }
 
 function clearFields() {
-    TaskForm.querySelector('select').value = '';
-    TaskForm.querySelector('input.title').value = '';
-    TaskForm.querySelector('.due > .date').value = '';
-    TaskForm.querySelector('.due > .time').value = '';
+    TaskForm.querySelector('.newTaskTab select').value = '';
+    TaskForm.querySelector('.newTaskTab input.title').value = '';
+    TaskForm.querySelector('.newTaskTab .due > .date').value = '';
+    TaskForm.querySelector('.newTaskTab .due > .time').value = '';
 }
 
 (function populateWorkSpaces() {
     const options = fetchWorkSpaces();
-    let selectEm = TaskForm.querySelector('select');
+    let selectEm = TaskForm.querySelector('.newTaskTab select');
     for (let option of options) {
         selectEm.innerHTML += `
                                     <option value="${option}">${option}</option>

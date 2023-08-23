@@ -1,5 +1,6 @@
 import { fetchTasks, fetchWorkSpaces } from "./taskStorage";
 import { displayNewTask } from "./newTask";
+import { displayDetails, populateDetails } from "./taskDetail";
 
 const content = document.querySelector('.main > .content');
 
@@ -51,12 +52,13 @@ function addTasks(workspace, space) {
         if (currTasks.length < 3) {
             if (task.workspace === space) {
                 tasksDiv.innerHTML += `
-                                    <div class="task ${task.status.code}">
-                                        <div class="due">${task.date}</div>
-                                        <div class="title">${task.title}</div>
-                                        <div class="time">${task.time}</div>
-                                    </div>
-                                    `;
+                                        <div class="task ${task.status.code}">
+                                            <div class="due">${task.date}</div>
+                                            <div class="title">${task.title}</div>
+                                            <div class="time">${task.time}</div>
+                                            <div class="id" style="display: none">${task.id}</div>
+                                        </div>
+                                        `;
             }
         }
     }
@@ -77,10 +79,19 @@ function clickTasks() {
     let currTasks = content.querySelectorAll('.content .tasks > .task');
     currTasks.forEach((task) => {
         task.addEventListener('click', () => {
-            let title = task.querySelector('.title').textContent;
-            console.log(title);
+            let id = parseInt(task.querySelector('.id').textContent);
+            let taskDet = getTask(id);
+            displayDetails();
+            populateDetails(taskDet);
         }); 
     });
+}
+
+function getTask(id) {
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    for (let task of tasks) {
+        if (task.id === id) return task;
+    }
 }
 
 displayOverview();

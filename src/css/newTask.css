@@ -23,23 +23,23 @@
     margin-bottom: 8px;
 }
 
-form {
+.newTaskTab > form {
     display: flex;
     flex-direction: column;
 }
 
-form > label {
+.newTaskTab > form > label {
     font-size: 13px;
 }
 
-form > select {
+.newTaskTab > form > select {
     width: 250px;
     height: 30px;
     border-radius: 10px;
     margin-bottom: 8px;
 }
 
-form > .title {
+.newTaskTab > form > .title {
     height: 30px;
     border-radius: 10px;
     padding: 4px;
@@ -47,21 +47,21 @@ form > .title {
     margin-bottom: 8px;
 }
 
-form > .due {
+.newTaskTab > form > .due {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 8px;
 }
 
-form > .due > * {
+.newTaskTab > form > .due > * {
     font-size: 13px;
     border: 1px solid lightgray;
     padding: 4px;
     border-radius: 10px;
 }
 
-form > .submit {
+.newTaskTab > form > .submit {
     align-self: end;
     width: 100px;
     padding: 4px;
@@ -71,6 +71,6 @@ form > .submit {
     color: rgb(0, 45, 0);
 }
 
-form > .submit:hover {
+.newTaskTab > form > .submit:hover {
     background-color: rgb(96, 166, 96);
 }

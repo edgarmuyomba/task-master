@@ -7,7 +7,9 @@ import '../css/today.css';
 import '../css/tomorrow.css';
 import '../css/thisWeek.css';
 import '../css/workspace.css';
+import '../css/taskDetail.css';
 
 import './modules/newTask.js';
 import './modules/sidebarNavigation.js';
 import './modules/newWorkspace.js';
+import './modules/taskDetail.js';
