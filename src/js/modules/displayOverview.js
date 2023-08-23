@@ -73,7 +73,7 @@ function handleNewTasks() {
             displayNewTask(title);
         });
     })
-}
+} 
 
 function clickTasks() {
     let currTasks = content.querySelectorAll('.content .tasks > .task');
