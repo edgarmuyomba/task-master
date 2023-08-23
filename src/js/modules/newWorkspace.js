@@ -1,4 +1,4 @@
-import { workspaces, saveWorkSpace } from "./taskStorage";
+import { saveWorkSpace } from "./taskStorage";
 
 const newSpaceButton = document.querySelector('.workspaces > .heading > .newSpace');
 const noSpaceButton = document.querySelector('.workspaces > .heading > .noSpace');

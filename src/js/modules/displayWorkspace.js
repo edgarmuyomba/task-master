@@ -1,4 +1,4 @@
-import { tasks } from "./taskStorage";
+import { fetchTasks } from "./taskStorage";
 
 const content = document.querySelector('.main > .content');
 
@@ -20,14 +20,15 @@ function setContent() {
 }
 
 function displayTasks(title) {
+    let tasks = fetchTasks();
     for (let task of tasks) {
         if (task.workspace === title) {
             content.innerHTML += `
-                                <div class="workspace-task">
-                                    <div class="title">${task.title}</div>
-                                    <div class="status ${task.status.code}">${task.status.title}</div>
-                                </div>
-                            `;
+                                    <div class="workspace-task">
+                                        <div class="title">${task.title}</div>
+                                        <div class="status ${task.status.code}">${task.status.title}</div>
+                                    </div>
+                                `;
         }
     }
 }

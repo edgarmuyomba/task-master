@@ -1,3 +1,5 @@
+let workspaces = document.querySelector('.sidebar > .workspaces');
+
 let titles = [
     "This is task 1",
     "This is task 2",
@@ -18,8 +20,6 @@ let bodies = [
     "This is body 7",
 ];
 
-let workspaces = [];
-
 let status = [
     {
         code: 'not-started',
@@ -39,23 +39,9 @@ let indices = [0, 1, 2, 3, 4, 5, 6];
 
 const tasks = [];
 
-for (let index of indices) {
-    let space = Math.floor(Math.random() * 2);
-    let state = Math.floor(Math.random() * 3);
-    tasks.push({
-        title: titles[index],
-        body: bodies[index],
-        workspace: workspaces[space],
-        status: status[state]
-    });
-}
-
-window.onload = () => {
-    workspaces = fetchWorkSpaces();
-}
 
 function fetchWorkSpaces() {
-    let savedSpaces = localStorage.getItem('workspaces');
+    let savedSpaces = JSON.parse(localStorage.getItem('workspaces'));
     if (savedSpaces) {
         return savedSpaces;
     }
@@ -70,8 +56,28 @@ function saveWorkSpace(name) {
     let savedSpaces = JSON.parse(localStorage.getItem('workspaces'));
     savedSpaces.push(name);
     localStorage.setItem('workspaces', JSON.stringify(savedSpaces));
-    workspaces.concat(savedSpaces);
+
+    location.reload();
 }
 
-console.log(workspaces);
-export { tasks, workspaces, saveWorkSpace };
+function fetchTasks() {
+    let savedTasks = JSON.parse(localStorage.getItem('tasks'));
+    if (savedTasks) {
+        return savedTasks;
+    }
+    else {
+     localStorage.setItem('tasks', JSON.stringify([]));
+     return [];
+    }
+        
+}
+
+function saveTask(task) {
+    let savedTasks = JSON.parse(localStorage.getItem('tasks'));
+    savedTasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(savedTasks));
+
+    location.reload();
+}
+
+export { fetchWorkSpaces, saveWorkSpace, saveTask, fetchTasks };

@@ -1,4 +1,4 @@
-import { tasks, workspaces } from "./taskStorage";
+import { fetchTasks, fetchWorkSpaces } from "./taskStorage";
 import { displayNewTask } from "./newTask";
 
 const content = document.querySelector('.main > .content');
@@ -22,6 +22,7 @@ function setContent() {
 }
 
 function createWorkSpaces() {
+    let workspaces = fetchWorkSpaces();
     for (let space of workspaces) {
         let workspace = document.createElement('div');
         workspace.classList.add('workspace');
@@ -44,6 +45,7 @@ function createDivs(workspace, space) {
 
 function addTasks(workspace, space) {
     let tasksDiv = workspace.querySelector('.tasks');
+    let tasks = fetchTasks();
     for (let task of tasks) {
         let currTasks = tasksDiv.querySelectorAll('.task');
         if (currTasks.length < 3) {

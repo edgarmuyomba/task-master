@@ -1,4 +1,4 @@
-import { tasks } from "./taskStorage";
+import { fetchTasks } from "./taskStorage";
 
 const content = document.querySelector('.main > .content');
 
@@ -20,6 +20,7 @@ function setContent() {
 }
 
 function displayTasks() {
+    let tasks = fetchTasks();
     for (let task of tasks) {
         content.innerHTML += `
                                 <div class="tomorrow-task">

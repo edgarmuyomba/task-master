@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import { fetchWorkSpaces, saveTask } from "./taskStorage";
 
 const newTask = document.querySelector('.main > .aside > .newTask');
 const newTaskCont = document.querySelector('.newTaskContainer');
@@ -26,13 +27,46 @@ date.setAttribute('value', minimumDate);
 
 function handleForm(event) {
     event.preventDefault();
+    
+    let workspace = TaskForm.querySelector('select').value;
+    let title = TaskForm.querySelector('input.title').value;
+    let date = TaskForm.querySelector('.due > .date').value;
+    let time = TaskForm.querySelector('.due > .time').value;
 
-    // save the task
-    console.log('saving the task. heh');
+    saveTask({
+        status: {
+            code: "not-started",
+            title: "Not Started"
+        },
+        workspace: workspace,
+        title: title,
+        date: date,
+        time: time,
+    });
+
+    hideNewTask();
+    clearFields();
 }
 
 function hideNewTask() {
     newTaskCont.style.display = 'none';
 }
+
+function clearFields() {
+    TaskForm.querySelector('select').value = '';
+    TaskForm.querySelector('input.title').value = '';
+    TaskForm.querySelector('.due > .date').value = '';
+    TaskForm.querySelector('.due > .time').value = '';
+}
+
+(function populateWorkSpaces() {
+    const options = fetchWorkSpaces();
+    let selectEm = TaskForm.querySelector('select');
+    for (let option of options) {
+        selectEm.innerHTML += `
+                                    <option value="${option}">${option}</option>
+                                `;
+    }
+})();
 
 export { displayNewTask };
