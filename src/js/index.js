@@ -10,3 +10,4 @@ import '../css/workspace.css';
 
 import './modules/newTask.js';
 import './modules/sidebarNavigation.js';
+import './modules/newWorkspace.js';

@@ -98,6 +98,63 @@
     gap: 18px;
 }
 
-.sidebar > .workspaces > .title {
+.sidebar > .workspaces > .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar > .workspaces .title {
     font-size: 20px;
+}
+
+.sidebar > .workspaces .newSpace {
+    content: url('../icon/plus-box.svg');
+    height: 20px;
+    width: 20px;
+    transition: 0.3s;
+}
+
+.sidebar > .workspaces .newSpace:hover {
+    scale: 120%;
+}
+
+.sidebar > .workspaces .noSpace {
+    content: url('../icon/minus-box.svg');
+    height: 20px;
+    width: 20px;
+    transition: 0.3s;
+}
+
+.sidebar > .workspaces .noSpace:hover {
+    scale: 120%;
+}
+
+.sidebar > .workspaces > .newSpaceForm form {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.sidebar > .workspaces > .newSpaceForm input {
+    width: 90%;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.sidebar > .workspaces > .newSpaceForm .enter {
+    background-color: lightgray;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.sidebar > .workspaces > .newSpaceForm .enter:hover {
+    background-color: gray;
+}
+
+.sidebar > .workspaces > .newSpaceForm img {
+    content: url('../icon/arrow-up-thick.svg');
+    width: 15px;
+    height: 15px;
 }
