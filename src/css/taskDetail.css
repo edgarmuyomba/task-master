@@ -1,68 +1,68 @@
 .taskDetailContainer {
-    font-family: var(--nunito);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    position: absolute;
+  font-family: var(--nunito);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  position: absolute;
 }
 
 .taskDetailTab {
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    padding: 16px 32px;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 16px 32px;
+  border-radius: 10px;
 }
 
 .taskDetailTab > .close {
-    align-self: end;
-    margin-left: auto;
-    margin-bottom: 8px;
+  align-self: end;
+  margin-left: auto;
+  margin-bottom: 8px;
 }
 
 .taskDetailTab > form {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
-    gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+  gap: 8px;
 }
 
 .taskDetailTab > form > * {
-    border-radius: 5px;
-    padding: 4px 8px;
+  border-radius: 5px;
+  padding: 4px 8px;
 }
 
 .taskDetailTab > form > .title {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    height: 40px;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  height: 40px;
 }
 
 .taskDetailTab > form > .body {
-    grid-column: 1 / 3;
-    grid-row: 2 / 5;
+  grid-column: 1 / 3;
+  grid-row: 2 / 5;
 }
 
 .taskDetailTab > form > .workspaces {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
 }
 
 .taskDetailTab > form > .due > * {
-    grid-row: 1 / 2;
-    height: 40px;
-    border-radius: 5px;
+  grid-row: 1 / 2;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .taskDetailTab > form > .submit {
-    height: 30px;
-    border: 1px solid lightgray;
+  height: 30px;
+  border: 1px solid lightgray;
 }
 
 .taskDetailTab > form > .submit:hover {
-    background-color: gray;
-    color: lightgray;
+  background-color: gray;
+  color: lightgray;
 }

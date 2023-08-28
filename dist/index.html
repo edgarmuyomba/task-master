@@ -1,71 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Master</title>
     <script src="./main.js" defer></script>
-</head>
+  </head>
 
-<!-- Photo by <a href="https://unsplash.com/@mariolagr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">MARIOLA GROBELSKA</a> on <a href="https://unsplash.com/photos/8a7ZTFKax_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
-<!-- Photo by <a href="https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kolosyuk</a> on <a href="https://unsplash.com/photos/D5nh6mCW52c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+  <!-- Photo by <a href="https://unsplash.com/@mariolagr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">MARIOLA GROBELSKA</a> on <a href="https://unsplash.com/photos/8a7ZTFKax_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+  <!-- Photo by <a href="https://unsplash.com/@anko_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Kolosyuk</a> on <a href="https://unsplash.com/photos/D5nh6mCW52c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 
-<body>
+  <body>
     <div class="sidebar">
-        <div class="logo">Task<span>Master</span></div>
-        <div class="profile">
-            <div class="profileImage"></div>
-            <div class="name">John Doe</div>
-            <div class="email">jonathan@doe.com</div>
+      <div class="logo">Task<span>Master</span></div>
+      <div class="profile">
+        <div class="profileImage"></div>
+        <div class="name">John Doe</div>
+        <div class="email">jonathan@doe.com</div>
+      </div>
+      <div class="inbox">Menu</div>
+      <div class="menu">
+        <div class="tile selected">
+          <div class="side-tile title">Overview</div>
         </div>
-        <div class="inbox">Menu</div>
-        <div class="menu">
-            <div class="tile selected">
-                <div class="side-tile title">Overview</div>
-            </div>
-            <div class="tile">
-                <div class="side-tile today">Today</div>
-            </div>
-            <div class="tile">
-                <div class="side-tile tomorrow">Tomorrow</div>
-            </div>
-            <div class="tile">
-                <div class="side-tile week">This Week</div>
-            </div>
-            <hr>
+        <div class="tile">
+          <div class="side-tile today">Today</div>
         </div>
-        <div class="workspaces">
-            <div class="heading">
-                <div class="title">Workspaces</div>
-                <img class="newSpace" src="" alt="" style="display: ''">
-                <img class="noSpace" src="" alt="" style="display: none">
-            </div>
-            <div class="newSpaceForm" style="display: none">
-                <form action="" method="POST">
-                    <input type="text" name="newSpace" placeholder="Workspace name" autocomplete="off">
-                    <div class="enter"><img src="" alt=""></div>
-                </form>
-            </div>
-            <!-- <div class="tile">
+        <div class="tile">
+          <div class="side-tile tomorrow">Tomorrow</div>
+        </div>
+        <div class="tile">
+          <div class="side-tile week">This Week</div>
+        </div>
+        <hr />
+      </div>
+      <div class="workspaces">
+        <div class="heading">
+          <div class="title">Workspaces</div>
+          <img class="newSpace" src="" alt="" style="display: &quot;&quot;" />
+          <img class="noSpace" src="" alt="" style="display: none" />
+        </div>
+        <div class="newSpaceForm" style="display: none">
+          <form action="" method="POST">
+            <input
+              type="text"
+              name="newSpace"
+              placeholder="Workspace name"
+              autocomplete="off"
+            />
+            <div class="enter"><img src="" alt="" /></div>
+          </form>
+        </div>
+        <!-- <div class="tile">
                     <div class="side-tile workspace">Personal</div>
                 </div> -->
-        </div>
+      </div>
     </div>
     <div class="main">
-        <div class="header">
-            <div class="title">Overview</div>
+      <div class="header">
+        <div class="title">Overview</div>
+      </div>
+      <div class="aside">
+        <div class="newTask">New Task</div>
+        <div class="fake">
+          <div class="filter">Filter</div>
+          <div class="sort">Sort</div>
+          <div class="category">Category</div>
         </div>
-        <div class="aside">
-            <div class="newTask">New Task</div>
-            <div class="fake">
-                <div class="filter">Filter</div>
-                <div class="sort">Sort</div>
-                <div class="category">Category</div>
-            </div>
-        </div>
-        <div class="content">
-            <!-- <div class="workspace">
+      </div>
+      <div class="content">
+        <!-- <div class="workspace">
                     <div class="heading">
                         <div class="title">Personal</div>
                         <div class="plus-box"></div>
@@ -78,47 +82,52 @@
                         </div>
                     </div>
                 </div> -->
-        </div>
+      </div>
     </div>
-    <div class="newTaskContainer" style="display: none;">
-        <div class="newTaskTab">
-            <div class="close"></div>
-            <form action="" method="POST">
-                <label for="Workspaces">Workspace</label>
-                <select name="Workspaces" id="Workspaces" required>
-                    <!-- <option value="Today" selected>Today</option> -->
-                </select>
-                <input class="title" type="text" name="Title" id="Title" placeholder="Title" required>
-                <div class="due">
-                    <input type="date" name="date" id="" class="date">
-                    <input type="time" name="" id="" class="time">
-                </div>
-                <input class="submit" type="submit" value="Create">
-            </form>
-        </div>
+    <div class="newTaskContainer" style="display: none">
+      <div class="newTaskTab">
+        <div class="close"></div>
+        <form action="" method="POST">
+          <label for="Workspaces">Workspace</label>
+          <select name="Workspaces" id="Workspaces" required>
+            <!-- <option value="Today" selected>Today</option> -->
+          </select>
+          <input
+            class="title"
+            type="text"
+            name="Title"
+            id="Title"
+            placeholder="Title"
+            required
+          />
+          <div class="due">
+            <input type="date" name="date" id="" class="date" />
+            <input type="time" name="" id="" class="time" />
+          </div>
+          <input class="submit" type="submit" value="Create" />
+        </form>
+      </div>
     </div>
-    <div class="taskDetailContainer" style="display: none;">
-        <div class="taskDetailTab">
-            <div class="close"></div>
-            <form action="" class="taskDetail" method="POST">
-                <input type="text" class="title">
-                <input type="text" class="body">
-                <select name="Workspaces" id="workspaces" class="workspaces">
-                </select>
-                <div class="due">
-                    <input type="date" name="date" id="" class="date">
-                    <input type="time" name="" id="" class="time">
-                </div>
-                <select name="status" id="status" class="status">
-                    <option value="not-started">Not Started</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="complete">Completed</option>
-                </select>
-                <input type="submit" value="Save" class="submit">
-                <div class="id" style="display: none;"></div>
-            </form>
-        </div>
+    <div class="taskDetailContainer" style="display: none">
+      <div class="taskDetailTab">
+        <div class="close"></div>
+        <form action="" class="taskDetail" method="POST">
+          <input type="text" class="title" />
+          <input type="text" class="body" />
+          <select name="Workspaces" id="workspaces" class="workspaces"></select>
+          <div class="due">
+            <input type="date" name="date" id="" class="date" />
+            <input type="time" name="" id="" class="time" />
+          </div>
+          <select name="status" id="status" class="status">
+            <option value="not-started">Not Started</option>
+            <option value="in-progress">In Progress</option>
+            <option value="complete">Completed</option>
+          </select>
+          <input type="submit" value="Save" class="submit" />
+          <div class="id" style="display: none"></div>
+        </form>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

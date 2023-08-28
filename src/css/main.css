@@ -1,126 +1,126 @@
 .main {
-    width: 85%;
-    height: 100%;
-    font-family: var(--roboto);
+  width: 85%;
+  height: 100%;
+  font-family: var(--roboto);
 }
 
 .main > .header {
-    height: 20%;
-    background-image: url('../img/header.jpg');
-    background-position: center;
-    background-size: cover;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  height: 20%;
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .main > .header > .title {
-    font-size: 32px;
-    color: slategray;
+  font-size: 32px;
+  color: slategray;
 }
 
 .main > .aside {
-    display: grid;
-    grid-template-columns: 10% 90%;
-    padding: 16px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 16px;
 }
 
 .main > .aside > .newTask {
-    grid-column: 1 / 2;
-    background-color: var(--orange);
-    padding: 8px;
-    border-radius: 10px;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    width: 110px;
-    cursor: default;
+  grid-column: 1 / 2;
+  background-color: var(--orange);
+  padding: 8px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 110px;
+  cursor: default;
 }
 
 .main > .aside > .newTask:hover {
-    background-color: chocolate;
+  background-color: chocolate;
 }
 
 .main > .aside > .fake {
-    display: flex;
-    gap: 8px;
-    grid-column: 2 / 3;
-    justify-self: end;
+  display: flex;
+  gap: 8px;
+  grid-column: 2 / 3;
+  justify-self: end;
 }
 
 .main > .aside > .fake > * {
-    border: 1.5px solid lightgray;
-    padding: 8px;
-    border-radius: 5px;
-    color: gray;
+  border: 1.5px solid lightgray;
+  padding: 8px;
+  border-radius: 5px;
+  color: gray;
 }
 
 .main > .content {
-    padding: 0 8px;
-    display: flex;
-    gap: 8px;
+  padding: 0 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .main > .content > .workspace {
-    width: 25%;
-    border-radius: 10px;
-    padding: 4px;
-    background-color: ghostwhite;
+  width: 25%;
+  border-radius: 10px;
+  padding: 4px;
+  background-color: ghostwhite;
 }
 
 .main > .content > .workspace > .heading {
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .main > .content > .workspace > .tasks {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .main > .content > .workspace .task {
-    height: 160px;
-    background-color: lightgrey;
-    margin-bottom: 8px;
-    border-radius: 10px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: var(--lato);
-    cursor: pointer;
-    transition: 0.3s;
+  height: 160px;
+  background-color: lightgrey;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--lato);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .main > .content > .workspace .task:hover {
-    scale: 105%;
+  scale: 105%;
 }
 
 .main > .content > .workspace .task.not-started {
-    border-right: 4px solid red;
+  border-right: 4px solid red;
 }
 
 .main > .content > .workspace .task.in-progress {
-    border-right: 4px solid orange;
+  border-right: 4px solid orange;
 }
 
 .main > .content > .workspace .task.complete {
-    border-right: 4px solid lime;
+  border-right: 4px solid lime;
 }
 
 .main > .content > .workspace .task > .due {
-    font-size: 13px;
-    font-weight: 700;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .main > .content > .workspace .task > .title {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .main > .content > .workspace .task > .time {
-    font-size: 13px;
+  font-size: 13px;
 }

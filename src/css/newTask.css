@@ -1,76 +1,76 @@
 .newTaskContainer {
-    font-family: var(--nunito);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    position: absolute;
+  font-family: var(--nunito);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  position: absolute;
 }
 
 .newTaskTab {
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    padding: 16px 32px;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 16px 32px;
+  border-radius: 10px;
 }
 
 .newTaskTab > .close {
-    align-self: end;
-    margin-left: auto;
-    margin-bottom: 8px;
+  align-self: end;
+  margin-left: auto;
+  margin-bottom: 8px;
 }
 
 .newTaskTab > form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .newTaskTab > form > label {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .newTaskTab > form > select {
-    width: 250px;
-    height: 30px;
-    border-radius: 10px;
-    margin-bottom: 8px;
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 
 .newTaskTab > form > .title {
-    height: 30px;
-    border-radius: 10px;
-    padding: 4px;
-    border: 1px solid lightgray;
-    margin-bottom: 8px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid lightgray;
+  margin-bottom: 8px;
 }
 
 .newTaskTab > form > .due {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .newTaskTab > form > .due > * {
-    font-size: 13px;
-    border: 1px solid lightgray;
-    padding: 4px;
-    border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid lightgray;
+  padding: 4px;
+  border-radius: 10px;
 }
 
 .newTaskTab > form > .submit {
-    align-self: end;
-    width: 100px;
-    padding: 4px;
-    background-color: lightgreen;
-    border: none;
-    border-radius: 5px;
-    color: rgb(0, 45, 0);
+  align-self: end;
+  width: 100px;
+  padding: 4px;
+  background-color: lightgreen;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 45, 0);
 }
 
 .newTaskTab > form > .submit:hover {
-    background-color: rgb(96, 166, 96);
+  background-color: rgb(96, 166, 96);
 }

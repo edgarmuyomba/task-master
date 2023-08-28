@@ -1,38 +1,41 @@
 import { saveWorkSpace } from "./taskStorage";
 
-const newSpaceButton = document.querySelector('.workspaces > .heading > .newSpace');
-const noSpaceButton = document.querySelector('.workspaces > .heading > .noSpace');
-let newForm = document.querySelector('.workspaces > .newSpaceForm');
+const newSpaceButton = document.querySelector(
+  ".workspaces > .heading > .newSpace",
+);
+const noSpaceButton = document.querySelector(
+  ".workspaces > .heading > .noSpace",
+);
+let newForm = document.querySelector(".workspaces > .newSpaceForm");
 
-newSpaceButton.addEventListener('click', () => {
-    newForm.style.display = '';
-    swapButtons();
-})
+newSpaceButton.addEventListener("click", () => {
+  newForm.style.display = "";
+  swapButtons();
+});
 
 function swapButtons() {
-    if (newSpaceButton.style.display === 'none') {
-        newSpaceButton.style.display = '';
-        noSpaceButton.style.display = 'none';
-    } else {
-        newSpaceButton.style.display = 'none';
-        noSpaceButton.style.display = '';
-    }
+  if (newSpaceButton.style.display === "none") {
+    newSpaceButton.style.display = "";
+    noSpaceButton.style.display = "none";
+  } else {
+    newSpaceButton.style.display = "none";
+    noSpaceButton.style.display = "";
+  }
 }
 
-noSpaceButton.addEventListener('click', () => {
-    newForm.style.display = 'none';
-    swapButtons();
-})
+noSpaceButton.addEventListener("click", () => {
+  newForm.style.display = "none";
+  swapButtons();
+});
 
-newForm.addEventListener('submit', handleNewSpace);
+newForm.addEventListener("submit", handleNewSpace);
 
 function handleNewSpace(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let inp = newForm.querySelector('input');
+  let inp = newForm.querySelector("input");
 
-    let workspace = inp.value;
-    saveWorkSpace(workspace);
-    inp.value = '';
-
+  let workspace = inp.value;
+  saveWorkSpace(workspace);
+  inp.value = "";
 }

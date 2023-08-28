@@ -1,51 +1,51 @@
 .main > .content.Workspace {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .main > .content.Workspace > * {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 4px 16px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    height: 50px;
-    cursor: pointer;
-    transition: 0.3s;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .main > .content.Workspace > *:hover {
-    scale: 101%;
+  scale: 101%;
 }
 
 .main > .content.Workspace > .workspace-task > .title {
-    font-weight: 500;
-    font-size: 20px;
-    border-right: 1px solid lightgrey;
-    padding-right: 32px;
+  font-weight: 500;
+  font-size: 20px;
+  border-right: 1px solid lightgrey;
+  padding-right: 32px;
 }
 
 .main > .content.Workspace > .workspace-task > .status {
-    margin-left: auto;
-    width: 7%;
-    padding: 2px 8px;
-    color: white;
-    font-size: 13px;
-    height: 70%;
-    display: flex;
-    align-items: center;
+  margin-left: auto;
+  width: 7%;
+  padding: 2px 8px;
+  color: white;
+  font-size: 13px;
+  height: 70%;
+  display: flex;
+  align-items: center;
 }
 
 .main > .content.Workspace > .workspace-task > .not-started {
-    background-color: tomato;
+  background-color: tomato;
 }
 
 .main > .content.Workspace > .workspace-task > .in-progress {
-    background-color: orange;
+  background-color: orange;
 }
 
 .main > .content.Workspace > .workspace-task > .complete {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }

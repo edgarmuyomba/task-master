@@ -1,104 +1,104 @@
 .sidebar > .profile > .name::after {
-    content: url('../icon/chevron-down.svg');
-    width: 15px;
-    height: 15px;
+  content: url("../icon/chevron-down.svg");
+  width: 15px;
+  height: 15px;
 }
 
 .sidebar > .menu .title::before {
-    content: url('../icon/menu.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/menu.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .menu .today::before {
-    content: url('../icon/today.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/today.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .menu .tomorrow::before {
-    content: url('../icon/tomorrow.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/tomorrow.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .menu .week::before {
-    content: url('../icon/week.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/week.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .workspaces > .tile > div::before {
-    content: url('../icon/pin.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/pin.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .main > .aside > .newTask::after {
-    content: url('../icon/plus-thick.svg');
-    height: 20px;
-    width: 20px;
+  content: url("../icon/plus-thick.svg");
+  height: 20px;
+  width: 20px;
 }
 
 .main > .content > .workspace > .heading > .plus-box {
-    content: url('../icon/plus-box.svg');
-    height: 15px;
-    width: 15px;
-    transition: 0.3s;
+  content: url("../icon/plus-box.svg");
+  height: 15px;
+  width: 15px;
+  transition: 0.3s;
 }
 
 .newTaskTab > .close {
-    content: url('../icon/close-box.svg');
-    height: 20px;
-    transition: 0.3s;
+  content: url("../icon/close-box.svg");
+  height: 20px;
+  transition: 0.3s;
 }
 
 .taskDetailTab > .close {
-    content: url('../icon/close-box.svg');
-    height: 20px;
-    transition: 0.3s;
+  content: url("../icon/close-box.svg");
+  height: 20px;
+  transition: 0.3s;
 }
 
 /* hover icons */
 
 .sidebar > .menu .title:hover::before {
-    content: url('../icon/menu-white.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/menu-white.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .menu .today:hover::before {
-    content: url('../icon/today-white.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/today-white.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .menu .tomorrow:hover::before {
-    content: url('../icon/tomorrow-white.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/tomorrow-white.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .menu .week:hover::before {
-    content: url('../icon/week-white.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/week-white.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .sidebar > .workspaces > .tile > div:hover::before {
-    content: url('../icon/pin-white.svg');
-    height: 25px;
-    width: 25px;
+  content: url("../icon/pin-white.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .newTaskTab > .close:hover {
-    scale: 120%;
+  scale: 120%;
 }
 
 .taskDetailTab > .close:hover {
-    scale: 120%;
+  scale: 120%;
 }
 
 .main > .content > .workspace > .heading > .plus-box:hover {
-    scale: 120%;
+  scale: 120%;
 }
